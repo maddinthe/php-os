@@ -18,13 +18,12 @@ $array = [
     ]
 ];
 echo "<ul>";
-foreach ($array as $key => $value) {
-    echo "<li> $key";
-    echo "<ol>";
-    foreach ($value as $key => $value) {
-        echo "<li>$key<ul>";
-        foreach ($value as $value)
-            echo "<li>$value</li>";
+foreach ($array as $name => $autos) {
+    echo "<li> $name<ol>";
+    foreach ($autos as $auto => $eigenschaften) {
+        echo "<li>$auto<ul>";
+        foreach ($eigenschaften as $eigenschaft)
+            echo "<li>$eigenschaft</li>";
         echo "</ul></li>";
     }
     echo "</ol></li>";

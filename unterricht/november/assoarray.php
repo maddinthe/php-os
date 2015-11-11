@@ -8,7 +8,8 @@
 <?php
 $array = [
     "Alfred" =>[
-        "Audi A4" => ["Schwarz", "180 PS", "2 Jahre"]
+        "Audi A4" => ["Schwarz", "180 PS", "2 Jahre"],
+        "Prosche" => ["Blau", "240 PS", "1 Jahre"]
     ],
     "Ingrid" =>[
         "VW Käfer" => ["Gelb", "110 PS", "6 Jahre"]
@@ -17,6 +18,12 @@ $array = [
         "VW Lupo" => ["Rot", "90 PS", "0 Jahre"]
     ]
 ];
+
+$array["Alfred"]["Mercedes"]=["Silber","235PS","3 Jahre"];
+
+//echo"<pre>";
+//var_dump($array);
+//echo "</pre>";
 echo "<ul>";
 foreach ($array as $name => $autos) {
     echo "<li> $name<ol>";
@@ -29,6 +36,8 @@ foreach ($array as $name => $autos) {
     echo "</ol></li>";
 }
 echo "</ul>";
+
+
 
 
 ?>

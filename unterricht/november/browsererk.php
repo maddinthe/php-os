@@ -9,11 +9,11 @@
 echo"<pre>";
 echo $_SERVER["HTTP_USER_AGENT"];
 echo"<br>";
-if($chrome = strpos($_SERVER["HTTP_USER_AGENT"],"Chrome")!=0){
+if($chrome = strpos($_SERVER["HTTP_USER_AGENT"],"Chrome")){
     echo"Chrome";
-}elseif($firefox= strpos($_SERVER["HTTP_USER_AGENT"],"Firefox")!=0){
+}elseif($firefox= strpos($_SERVER["HTTP_USER_AGENT"],"Firefox")){
     echo"Firefox";
-}elseif($ie= strpos($_SERVER["HTTP_USER_AGENT"],"Trident")!=0){
+}elseif($ie= strpos($_SERVER["HTTP_USER_AGENT"],"Trident")){
     echo"InternetExplorer";
 }else echo"Unbekannter Browser";
 

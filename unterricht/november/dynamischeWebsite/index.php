@@ -4,7 +4,12 @@ $pages=[
     'lists'=>'Listen',
     'tables'=>'Tabellen'
 ];
-
+if (isset($_GET['page'])) {
+    $currentPage = $_GET['page'];
+}
+else {
+    $currentPage = 'home';
+}
 ?>
 <!DOCTYPE html>
 <html>

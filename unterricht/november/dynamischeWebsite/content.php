@@ -1,3 +1,9 @@
 <section>
-    <p>content</p>
+
+        Content
+
+        <?php
+        require 'pages/'.$currentPage.'.php';
+        ?>
+
 </section>

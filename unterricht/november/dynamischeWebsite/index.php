@@ -19,11 +19,12 @@ else {
     <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
+<div>
 <?php
 require 'head.php';
 require 'navigation.php';
 require 'content.php';
 require 'foot.php';
-?>
+?></div>
 </body>
 </html>

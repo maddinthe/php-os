@@ -1,3 +1,28 @@
-h1{
-    color: red;
+header>h1{
+   padding: 1%;
+    margin: 0;
+}
+header, footer{
+    background-color: lightgoldenrodyellow;
+    clear: both;
+}
+nav{
+    padding: 10px;
+    float: left;
+    border-right: solid black 1px;
+    width: 120px;
+}
+section{
+    float: left;
+    padding: 10px;
+    width: 630px;
+}
+div{
+    padding: 0;
+    margin: auto;
+    width: 800px;
+    border: solid black 1px;
+}
+footer>p{
+    margin: 0;
 }

@@ -2,10 +2,13 @@
 $pages=[
     'home'=>'Allgemeines',
     'lists'=>'Listen',
-    'tables'=>'Tabellen'
+    'tables'=>'Tabellen',
+    'formulare'=>'Formulare'
 ];
-if (isset($_GET['page'])) {
+if (isset($_GET['page'])&&isset($pages[$_GET['page']])) {
+
     $currentPage = $_GET['page'];
+
 }
 else {
     $currentPage = 'home';
@@ -19,11 +22,13 @@ else {
     <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-<div>
+<div id="all">
 <?php
 require 'head.php';
+echo "<div id='main'>";
 require 'navigation.php';
 require 'content.php';
+echo "</div>";
 require 'foot.php';
 ?></div>
 </body>

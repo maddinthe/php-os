@@ -1,15 +1,30 @@
 <?php
 
-function createGallery($srcdir, $n, $width, $height=null){
-    $ret='<table><tbody><tr>';
-    $bilder=glob($srcdir.'*.jpg');
-    foreach ($bilder as $key =>$bild){
-       $ret.='<td><a href="'.$bild.'"target="blank"><img src="'.$bild.'" alt=""width="'.$width.'"/></a></td>';
-        if ((($key+1)%$n)==0)$ret.='</tr><tr>';
+function createGallery($srcdir, $n, $width, $height = null)
+{
+    $ret = '<table><tbody><tr>';
+    $bilder = glob($srcdir . '*.jpg');
+    $counter=1;
+    if ($height == null) {
+        foreach ($bilder as $bild) {
+            $ret .= '<td><a href="' . $bild . '"target="blank"><img src="' . $bild . '"width="' . $width . '"/></a></td>';
+            if ($counter++==$n){ $ret .= '</tr><tr>';
+            $counter=1;}
+        }
+    } else {
+        foreach ($bilder as $bild) {
+            $ret .= '<td><a href="' . $bild . '"target="blank"><img src="' . $bild . '"width="' . $width . '"height="' . $height . '"/></a></td>';
+            if ($counter++==$n){ $ret .= '</tr><tr>';
+                $counter=1;}
+        }
+
     }
-    return $ret.'</tr></tbody></table>';
+    while($counter++<=$n){
+        $ret.='<td></td>';
+    }
+    return $ret . '</tr></tbody></table>';
 }
 
-echo createGallery('./bilder/',7,100);
+echo createGallery('./bilder/', 5, 100);
 
 ?>

@@ -6,7 +6,8 @@ $pages=[
     'formulare'=>'Formulare',
     'thesaurus'=>'Thesaurus',
     'fakultaet'=>'Fakultät',
-    'gallery'=>'Gallerie'
+    'gallery'=>'Gallerie',
+    'karte'=>'Pizza-Karte'
 ];
 if (isset($_GET['page'])&&isset($pages[$_GET['page']])) {
 

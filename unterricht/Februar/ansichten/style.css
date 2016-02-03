@@ -1,0 +1,25 @@
+div{
+    width: 600px;
+    height: 400px;
+    position: absolute;
+    top: 40px;
+    text-align: center;
+
+
+}
+#ansicht_1{
+    background-color: aqua;
+    border-radius: 10px;
+}
+#ansicht_2{
+    background-color: salmon;
+    border-radius: 20px;
+}
+#ansicht_3{
+    background-color: gold;
+    border-radius: 30px;
+}
+#ansicht_4{
+    background-color: lightgreen;
+    border-radius: 40px;
+}

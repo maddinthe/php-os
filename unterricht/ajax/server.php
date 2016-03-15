@@ -10,15 +10,19 @@
 //}else
 //echo "Test";
 
-$info=[
+$info1=[
     "film"=>"deadpool",
     "fsk"=>16,
     "Länge"=>100
-
+];
+$info2=[
+    "film"=>"wurst",
+    "fsk"=>16,
+    "Länge"=>100
 ];
 
 
-echo json_encode($info)
+echo json_encode([$info1,$info2])
 
 
 ?>
